@@ -19,14 +19,13 @@ public class AddLinkDataServlet extends HttpServlet {
     }
  
     @Override
-    protected void doPost(HttpServletRequest req,
-            HttpServletResponse resp)
+    protected void doPost(HttpServletRequest req,HttpServletResponse resp)
             throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         String title = req.getParameter("pizza");
         String name = req.getParameter("name");
         int price = 0;
-        int haitatu=0;
+        int haitatu=1;
         if(title.equals("マリナーラ")==true) price=450;
         if(title.equals("マルゲリータ")==true) price=500;
         if(title.equals("クアトロフォルマッジ")==true) price=550;

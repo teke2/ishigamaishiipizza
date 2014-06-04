@@ -14,14 +14,12 @@
                 res += '<tr><td>' + json[0].title +'</td></tr>';
                 res += '<tr><td>' + json[0].price+'</td></tr>';
                 res += '<tr><td>' + json[0].comment +'</td></tr>';
-                res += '<tr><td>' + json[i].haitatu+ '</td></tr>';
             } else {
                 for (var i = 0;i < json.length;i++){
                     res += '<tr><td>' + json[i].title + '</td>';
                     res += '<td>' + json[i].price + '</td>';
                     res += '<td>' + json[i].comment + '</td>';
-                    res += '<td>' + json[i].haitatu + '</td>';
-                    res +='<td><a href="edit2.html?id=' + json[i].id + '">Edit</td></tr>';
+                    res +='<td><a href="edit2.html?id=' + json[i].id + '">配達</td></tr>';
                 }
             }
             var obj = document.getElementById("datatable");

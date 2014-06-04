@@ -1,7 +1,7 @@
 package pizzashop;
 import java.net.URL;
 import java.util.Date;
- 
+
 import javax.jdo.annotations.*;
  
 @PersistenceCapable(identityType = IdentityType.APPLICATION)
@@ -12,28 +12,32 @@ public class LinkData2 {
      
     @Persistent
     private String title;
-     
-    @Persistent
-    private int price;
-     
-    @Persistent
-    private String comment;
-     
-    @Persistent
-    private Date datetime;
     
     @Persistent
-    private int haitatu;
- //配達済み(2)と注文しただけのやつ(1)と今注文したやつ(0)を分けるやつを作る
-    public LinkData2(String title, int price, String comment, Date datetime,int haitatu) {
+    private String comment;
+
+    //増やしたの↓
+    @Persistent
+    private int price;
+
+    @Persistent
+    private String name;
+
+    public LinkData2(String title,int price, String comment) {
         super();
         this.title = title;
         this.price = price;
         this.comment = comment;
-        this.datetime = datetime;
-        this.haitatu = haitatu;
     }
- 
+/*
+    public LinkData2(String title, int price, String comment, String name) {
+        super();
+        this.title = title;
+        this.price = price;
+        this.comment = comment;
+        this.name=name;
+    }*/
+    
     public Long getId() {
         return id;
     }
@@ -49,15 +53,7 @@ public class LinkData2 {
     public void setTitle(String title) {
         this.title = title;
     }
- 
-    public int getPrice() {
-        return price;
-    }
- 
-    public void setPrice(int price) {
-        this.price = price;
-    }
- 
+
     public String getComment() {
         return comment;
     }
@@ -65,19 +61,21 @@ public class LinkData2 {
     public void setComment(String comment) {
         this.comment = comment;
     }
- 
-    public Date getDatetime() {
-        return datetime;
+    //増やしたの 
+    public int getPrice() {
+        return price;
     }
  
-    public void setDatetime(Date datetime) {
-        this.datetime = datetime;
+    public void setPrice(int price) {
+        this.price = price;
     }
-    
-    public int getHaitatu(){
-    	return haitatu;
+/*    できなかった
+    public String getName() {
+        return name;
     }
-    public  void setHaitatu(int haitatu){
-    	this.haitatu=haitatu;
+ 
+    public void setName(String name) {
+        this.name = name;
     }
+    */
 }

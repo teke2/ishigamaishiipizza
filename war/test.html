@@ -10,21 +10,22 @@
             var datas = getQuery();
             getData(datas.id);
         }
+         
         function callback(request){
             var arr = eval(request.responseText);
             var data = arr[0];
             document.getElementById("id").value = data.id;
             document.getElementById("title").value = data.title;
             document.getElementById("comment").value = data.comment;
-            document.getElementById("price").value = data.price;
-            document.getElementById("name").value = data.name;
+            document.getElementById("url").value = data.url;
+            document.getElementById("name").value=data.name;
+            document.getElementById("price").value=data.value;
         }
         //-->
         </script>
     </head>
     <body onload="initial();">
         <h1>データの更新</h1>
-                <div align="center">
         <table>
         <form method="post" action="/edit2">
             <input type="hidden" id="id" name="id">
@@ -35,6 +36,5 @@
             <tr><th></th><td><input type="submit" value="変更"></td></tr>
         </form>
         </table>
-        </div>
     </body>
 </html>

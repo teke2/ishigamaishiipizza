@@ -25,12 +25,10 @@ public class LinkData {
     
     @Persistent
     private int haitatu;
- //配達済み(2)と注文しただけのやつ(1)と今注文したやつ(0)を分けるやつを作る
     
     @Persistent
     private String name;
 
-    
     public LinkData(String title, int price, String comment, Date datetime,int haitatu,String name) {
         super();
         this.title = title;
